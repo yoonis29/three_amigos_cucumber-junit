@@ -4,22 +4,24 @@ Feature: vytrack app login feature
   and dashboard should be displayed.
 
   Accounts are: truck driver, store manager, sale manager
-  @truckDriver
+
+  @truckdrvr
   Scenario: Login as truck driver
-    Given user is on vytrack login page
-    When user enters truck driver username
-    And user enters truck driver  password
+    Given user puts the credential  on vytrack login page
     Then user should see dashboard
 
+  @slsMagr
+  Scenario: Login as sales managers
+    Given user put the credential  on vytrack login page
+    Then user should able see dashboard
 
-  Scenario: Login as store manager
-    Given user is on vytrack login page
-    When user enters store manager username
-    And user enters store manager password
-    Then user should see dashboard
 
-  Scenario: Login as sales manager
-    Given user is on vytrack login page
-    When user enters sales manager username
-    And user enters sales manager password
-    Then user should see dashboard
+  @storeMgre
+  Scenario: Login as store managers
+    Given user puting the credential
+    Then user should able to see dashboard
+
+    @assert
+    Scenario: Check refresh btn is left side of reset btn
+      Given user locate the refresh btn
+      Then user able to see the reset on the left side of the refresh
