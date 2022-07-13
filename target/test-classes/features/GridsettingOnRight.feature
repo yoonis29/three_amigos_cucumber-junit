@@ -1,6 +1,6 @@
 Feature: Grid Setting Feature
 
-  @wip
+  @yoyo
   Scenario: Locate Grid Setting on the right side of the page
     Given user is logged in vytrack application
     When user hovers over fleet Module

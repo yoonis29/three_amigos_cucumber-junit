@@ -30,7 +30,7 @@ public class VehiclesVyTrack {
     @FindBy(xpath = "//a[@title='Refresh']")
     public WebElement refreshBtn;
 
-    @FindBy(xpath = "//a[@title='Grid Settings']")
+    @FindBy(xpath = "//a[@title='Reset']//following-sibling::div//a[@title='Grid Settings']")
     public WebElement gridSettings;
 
     @FindBy(xpath = "//span[@class='grid-header-cell__label' and text()='Location'][1]")
