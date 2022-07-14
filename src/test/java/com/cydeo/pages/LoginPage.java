@@ -1,6 +1,7 @@
 package com.cydeo.pages;
 
 
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebElement;
@@ -32,7 +33,11 @@ public class LoginPage {
         submitBtn.click();
     }
 
+    public void loginAsDriver(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("vyTrackUrl"));
+        loginInput.sendKeys(ConfigurationReader.getProperty("driver_username"));
+        passwordInput.sendKeys(ConfigurationReader.getProperty("driver_password"));
+        submitBtn.click();
 
-
-
+    }
 }
